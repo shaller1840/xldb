@@ -100,6 +100,9 @@ class TableBox(toga.Box):
             self.app.main_window.confirm_dialog(
                 'Confirm Deletion', 'Delete the seleted rows for the table?',
                 _delete_lines)
+        else:
+            self.app.main_window.info_dialog(
+                'No Selection', 'Please select some rows to delete.')
             
     def load_table(self):
         db_cursor = self.db_conn.cursor()
