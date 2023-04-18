@@ -57,7 +57,7 @@ class TableBox(toga.Box):
 
         button_box = toga.Box(style=Pack(direction=ROW, padding=5))
         button_box.add(toga.Button(
-            "insert",
+            "add/update",
             on_press=self.insert_line,
             style=Pack(padding=5)
         ))
@@ -134,7 +134,7 @@ class TableBox(toga.Box):
             self.refresh_table()
 
         self.app.main_window.confirm_dialog(
-            'Confirm Clear', 'clear the table?',
+            'Confirm Clear', 'Clear the table?',
             _clear_table)
 
 class xldb(toga.App):
